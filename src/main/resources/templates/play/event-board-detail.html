@@ -107,7 +107,7 @@
                                                                 >#</span
                                                                 >
                                                                 <span
-                                                                        class="camping_div_second_span"
+                                                                        class="camping_div_second_span selected-category-play"
                                                                 >농촌</span
                                                                 >
                                                             </div>
@@ -233,7 +233,7 @@
                                 </button>
                                 </div>
                                 <!-- 통솔자 일때만 보이게 하기 -->
-                                <button class="guide_wrap_button" th:if="${session.member != null and #strings.equals(session.member.memberType, 'GENERAL_GUIDE')}">
+                                <button class="guide_wrap_button" th:if="${session.member != null and #strings.equals(session.member.memberType, 'GENERAL_GUIDE') and eventDTO.isApplied}">
                                         <span class="camping_div_second_span" >
                                             <span class="button_children">
                                                 <span class="button_leader"

@@ -480,7 +480,7 @@ $('.purchase_like_btn').on('click', function () {
     });
 })
 
-
+$(".selected-category-play").text(convertCategory(eventDTO.category))
 
     function moveApply() {
         let url = `/event/applyEvent/${eventDTO.id}`;
