@@ -29,11 +29,12 @@ import com.app.babybaby.type.GuideType;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RestController
+@Controller
 @RequestMapping("/admin/*")
 @RequiredArgsConstructor
 @Slf4j
@@ -71,7 +72,9 @@ public class AdminController {
     public void guideList(){}
 
     @GetMapping("admin-memberList")
-    public void memberList(){}
+    public String memberList(){
+        return "admin/admin-memberList";
+    }
 
     @GetMapping("admin-nowKidsList")
     public void nowKidsList(){}
