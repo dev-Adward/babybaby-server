@@ -59,7 +59,7 @@ spring:
             client-name: Naver
             client-id: mmwkeUCk_aGZ5CRwz2zI
             client-secret: hhahl19XKJ
-            redirect-uri: http://baby-baby.store/login/oauth2/code/naver
+            redirect-uri: http://www.baby-baby.store/login/oauth2/code/naver
             authorization-grant-type: authorization_code
             scope: name,email,mobile,nickname
 
@@ -67,7 +67,7 @@ spring:
           kakao:
             client-id: 0c8cc08d9f8f4ef0430dfbdb6bb7b2c7
             client-secret: Zj7d2o5LVvPHy9JT8C8WyfPIF6kqD8MR
-            redirect-uri: http://baby-baby.store/login/oauth2/code/kakao
+            redirect-uri: http://www.baby-baby.store/login/oauth2/code/kakao
             client-authentication-method: POST
             authorization-grant-type: authorization_code
             scope: account_email

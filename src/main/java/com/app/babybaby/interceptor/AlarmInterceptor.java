@@ -44,12 +44,12 @@ public class AlarmInterceptor implements HandlerInterceptor {
 
     @Override
     public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex) throws Exception {
-        HandlerInterceptor.super.afterCompletion(request, response, handler, ex);
-        //        status가 unread인 알림의 수를 세션에 담는다.
-        MemberDTO memberDTO = (MemberDTO)session.getAttribute("member");
-        Long session = memberDTO.getId();
-        List<MemberDTO> followers = alertFollowService.find8RecentFollowersByMemberId(session);
-        request.getSession().setAttribute("followers", followers);
+//        HandlerInterceptor.super.afterCompletion(request, response, handler, ex);
+//        //        status가 unread인 알림의 수를 세션에 담는다.
+//        MemberDTO memberDTO = (MemberDTO)session.getAttribute("member");
+//        Long session = memberDTO.getId();
+//        List<MemberDTO> followers = alertFollowService.find8RecentFollowersByMemberId(session);
+//        request.getSession().setAttribute("followers", followers);
 //        Long NoReadCount = (Long)request.getAttribute("noReadAlarm");
 
     }
