@@ -25,11 +25,13 @@ $(".categoryType").on("click", function () {
     $(this).addClass('active')
     $('.instance').remove()
     boardService.getList(appendList);
+
+
     $(window).scroll(function() {
-        if($(window).scrollTop() + $(window).height() == Math.floor($(document).height() * 0.9)) {
+        if(Math.floor(($(window).scrollTop() + $(window).height())/10)*10 == Math.floor(($(document).height() * 0.9)/10) * 10) {
+            page++
             boardService.getList(appendList);
             bindLikeButtonClickEvent()
-            page++
             console.log(page)
         }
     });
@@ -186,7 +188,9 @@ boardService.getList(function(eventListDTO) {
 
 
 $(window).scroll(function() {
-    if($(window).scrollTop() + $(window).height() == Math.floor($(document).height() * 0.9)) {
+    console.log(Math.floor(($(window).scrollTop() + $(window).height())/10)*10)
+    console.log(Math.floor(($(document).height() * 0.9)/10) * 10)
+    if(Math.floor(($(window).scrollTop() + $(window).height())/10)*10 == Math.floor(($(document).height() * 0.9)/10) * 10) {
         page++;
         boardService.getList(appendList);
         bindLikeButtonClickEvent()

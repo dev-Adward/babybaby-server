@@ -7,9 +7,10 @@ import com.app.babybaby.service.admin.adminAnnouncement.AdminAnnouncementService
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
-@RestController
+@Controller
 @RequestMapping("/user-part/*")
 @RequiredArgsConstructor
 @Slf4j

@@ -1,4 +1,4 @@
-var openKey = '52526378646672653138734456724a';
+var openKey = '56485576576568643530795a486f46';
 
 $(document).ready(function(){
     $(".lecture-type-buttons li").click(function(){
