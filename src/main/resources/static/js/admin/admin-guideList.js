@@ -321,7 +321,7 @@ function showList(guideDTOS) {
 							<label>
 								<div class="content-img">
 									<img
-										src="/members/display?fileName=Member/profile/${guide.memberProfilePath}/${guide.memberProfileUUID}_${guide.memberProfileOriginalName}"
+										src="/members/display?fileName=Member/Profile/${guide.memberProfilePath}/${guide.memberProfileUUID}_${guide.memberProfileOriginalName}"
 									/>
 								</div>
 							</label>

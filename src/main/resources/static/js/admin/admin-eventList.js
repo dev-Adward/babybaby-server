@@ -400,7 +400,7 @@ function showList(eventBoardDTOS) {
         let now = new Date();
         let changeEventStatus = null;
         let eventStatusColor = null;
-        let  fullAddress = eventBoard.eventAddress + ' ' + eventBoard.eventAddressDetail + ' ' + eventBoard.memberAddressSubDetail;
+        let  fullAddress = eventBoard.eventAddress;
 
         if (eventBoard.category === null) {
             changeCategoryName = '전체';
