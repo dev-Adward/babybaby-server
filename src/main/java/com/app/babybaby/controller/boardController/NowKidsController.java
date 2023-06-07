@@ -57,8 +57,12 @@ public class NowKidsController {
 
     @GetMapping("writeFirst")
     public String goWriteNowKids(Model model, HttpSession session) {
-        MemberDTO memberDTO = (MemberDTO)session.getAttribute("member");
-        Long sessionId = memberDTO.getId();
+        Long sessionId = null;
+        if((MemberDTO)session.getAttribute("member") != null){
+            MemberDTO memberDTO = (MemberDTO)session.getAttribute("member");
+            sessionId = memberDTO.getId();
+        }
+
         Member member = memberRepository.findById(sessionId).get();
         List<Tuple> nowKidsEvents = nowKidsRepository.findEventAndCalendarInfoByGuideId_QueryDsl(sessionId);
         JSONArray calendars = new JSONArray();
@@ -172,9 +176,11 @@ public class NowKidsController {
     @PostMapping("getList")
     @ResponseBody
     public String getList(Integer pageNumber, HttpSession session){
-        MemberDTO memberDTO = (MemberDTO)session.getAttribute("member");
         Long sessionId = null;
-        if(memberDTO != null){
+        MemberDTO memberDTO = null;
+
+        if((MemberDTO)session.getAttribute("member") != null){
+            memberDTO = (MemberDTO)session.getAttribute("member");
             sessionId = memberDTO.getId();
         }
         Page<NowKidsDTO> nowKidsDTOS = nowKidsService.getAllInfoForListDesc(pageNumber, 2, sessionId);
@@ -197,7 +203,6 @@ public class NowKidsController {
 
             jsonArray.put(jsonObject);
         });
-        log.info("========================================================================" + memberDTO.toString());
         return jsonArray.toString();
     }
 

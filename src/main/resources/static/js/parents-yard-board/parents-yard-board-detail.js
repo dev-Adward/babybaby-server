@@ -186,7 +186,7 @@ function appendCategoryList(categoryResults) {
                                         <p class="other-title">${category.parentsBoardTitle}</p>
                                         <p class="other-content">${category.parentsBoardContent}</p>
                                         <p class="info">
-                                            <em class="date">${convertedTime}</em>
+                                            <em class="bottom-date">${convertedTime}</em>
                                         </p>
                                     </div>
                                     <div class="img-wrap">
