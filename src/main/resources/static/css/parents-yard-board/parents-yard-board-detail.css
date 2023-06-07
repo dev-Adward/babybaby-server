@@ -738,7 +738,7 @@ button.btn-category {
         position: relative;
         width: 430px;
         height: auto;
-        padding: 15px 0 15px 15px;
+        /*padding: 15px 0 15px 15px;*/
     }
     
     .story-info em.category {

@@ -62,7 +62,7 @@
 
                 <span>]</span><span th:text="${parentsBoard.eventTitle}"></span></h2>
             <h2 class="parents-yard-board-detail-title" th:text="${parentsBoard.parentsBoardTitle}"></h2>
-            <div>
+<!--            <div>-->
                 <span class="parents-yard-board-detail-date" th:attr="data-original-date=${parentsBoard.parentsBoardUpdateDate}">
             <script th:inline="javascript">
                 let boardId = [[${parentsBoard.id}]];
@@ -90,7 +90,7 @@
             </div>
         </div>
         <div class="divide-line"></div>
-        <div class="parents-yard-board-detail-content-wrapper">
+        <div class="parents-yard-board-detail-content-wrapper" style="width: 960px; margin:0 auto;">
             <div class="parents-yard-board-detail-content-container">
                 <div class="parents-yard-detail-img" th:each="file : ${parentsBoard.parentsBoardFileDTOS}">
                     <img class="detail-img" th:src="'/parentsBoardFiles/display?fileName=ParentsBoard/' + ${file.filePath} + '/' + ${file.fileUUID} + '_' + ${file.fileOriginalName}">
@@ -244,6 +244,5 @@
 <script src="/js/components/header.js"></script>
 <script>
     let sessionId = [[${session.member.id}]]
-    console.log("세션아이디: " + sessionId)
 </script>
 </html>
