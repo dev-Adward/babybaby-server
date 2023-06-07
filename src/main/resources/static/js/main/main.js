@@ -716,9 +716,7 @@ function appendCategoryList(categoryResults) {
                                         ${category.parentsBoardContent}
                                     </div>
                                 </div>
-                                <div class="event-box-date-container">
-                                    ${uploadDate}
-                                </div>
+
                             </div>`
         ;
         index++;
